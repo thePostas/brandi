@@ -37,16 +37,20 @@
     height: 730px;
     &-slider {
       display: flex;
+      position: relative;
       justify-content: center;
       align-items: flex-end;
       height: 100%;
       &-content {
+        overflow: hidden;
         max-width: 60%;
         max-height: 300px;
         margin-bottom: 175px;
         &-box {
           text-align: center;
           font-family: OpenSansLight;
+          margin-top: 125px;
+          margin-bottom: 100px;
           &-title{
             font-size: 62px;
           &-important {
@@ -64,6 +68,7 @@
           &-additional-text{
             position: relative;
             font-size: 18px;
+            margin-left: 2px;
             &:before {
               position: absolute;
               top: 50%;
@@ -92,6 +97,31 @@
                 right: 20px;
               }
             }
+          }
+        }
+        &-wrapper {
+          position: relative;
+          height: 300px;
+        }
+      }
+      &-controls {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        top: 41%;
+        right: 3%;
+        &-button {
+          cursor: pointer;
+          width: 8px;
+          height: 8px;
+          margin: 7px 0;
+          border-radius: 50%;
+          border: 1px solid #fff;
+          &:hover {
+            transform: scale(1.5);
+          }
+          &_active {
+            background-color: #fff;
           }
         }
       }

@@ -34,11 +34,13 @@
 }
 .header__lower-header-slider {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: flex-end;
   height: 100%;
 }
 .header__lower-header-slider-content {
+  overflow: hidden;
   max-width: 60%;
   max-height: 300px;
   margin-bottom: 175px;
@@ -46,6 +48,8 @@
 .header__lower-header-slider-content-box {
   text-align: center;
   font-family: OpenSansLight;
+  margin-top: 125px;
+  margin-bottom: 100px;
 }
 .header__lower-header-slider-content-box-title {
   font-size: 62px;
@@ -64,6 +68,7 @@
 .header__lower-header-slider-content-box-additional-text {
   position: relative;
   font-size: 18px;
+  margin-left: 2px;
 }
 .header__lower-header-slider-content-box-additional-text:before {
   position: absolute;
@@ -100,6 +105,31 @@
   .header__lower-header-slider-content-box-additional-text:after {
     right: 20px;
   }
+}
+.header__lower-header-slider-content-wrapper {
+  position: relative;
+  height: 300px;
+}
+.header__lower-header-slider-controls {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 41%;
+  right: 3%;
+}
+.header__lower-header-slider-controls-button {
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  margin: 7px 0;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+.header__lower-header-slider-controls-button:hover {
+  transform: scale(1.5);
+}
+.header__lower-header-slider-controls-button_active {
+  background-color: #fff;
 }
 .logo {
   position: relative;
