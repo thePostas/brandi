@@ -10,11 +10,16 @@
   font-family: "OpenSansRegular";
   src: url(../fonts/open-sans.ttf) format("truetype");
 }
+@font-face {
+  font-family: "OpenSansBold";
+  src: url(../fonts/open-sans-bold.ttf) format("truetype");
+}
 .header {
   display: flex;
+  color: #fff;
   flex-direction: column;
   height: 800px;
-  background: url('../img/header_bg.jpg') no-repeat center center;
+  background: #124232 url('../img/header_bg.jpg') no-repeat center center;
   background-clip: content-box;
 }
 .header__upper-header {
@@ -22,6 +27,78 @@
   height: 70px;
   background-color: rgba(16, 22, 54, 0.2);
   font-size: 13px;
+}
+.header__lower-header {
+  height: 730px;
+}
+.header__lower-header-slider {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+.header__lower-header-slider-content {
+  max-width: 60%;
+  max-height: 300px;
+  margin-bottom: 175px;
+}
+.header__lower-header-slider-content-box {
+  text-align: center;
+  font-family: OpenSansLight;
+}
+.header__lower-header-slider-content-box-title {
+  font-size: 62px;
+}
+.header__lower-header-slider-content-box-title-important {
+  font-family: OpenSansBold;
+}
+.header__lower-header-slider-content-box-description {
+  margin-left: -5px;
+  font-size: 48px;
+  margin-bottom: 18px;
+}
+.header__lower-header-slider-content-box-description-colored {
+  color: #0feb9e;
+}
+.header__lower-header-slider-content-box-additional-text {
+  position: relative;
+  font-size: 18px;
+}
+.header__lower-header-slider-content-box-additional-text:before {
+  position: absolute;
+  top: 50%;
+  left: 115px;
+  content: '';
+  width: 28px;
+  border-bottom: 1px solid #0feb9e;
+}
+@media screen and (max-width: 900px) {
+  .header__lower-header-slider-content-box-additional-text:before {
+    left: 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header__lower-header-slider-content-box-additional-text:before {
+    left: 20px;
+  }
+}
+.header__lower-header-slider-content-box-additional-text:after {
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  content: '';
+  width: 28px;
+  border-bottom: 1px solid #0feb9e;
+}
+@media screen and (max-width: 900px) {
+  .header__lower-header-slider-content-box-additional-text:after {
+    right: 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .header__lower-header-slider-content-box-additional-text:after {
+    right: 20px;
+  }
 }
 .logo {
   position: relative;
