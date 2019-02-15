@@ -35,96 +35,104 @@
   &__lower-header {
     position: relative;
     height: 730px;
-    &-slider {
-      display: flex;
+  }
+  &__socials {
+    left: 46%;
+    bottom: 48px;
+    @media screen and (max-width: 640px) {
+      left: 40%;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  &-content {
+    overflow: hidden;
+    min-width: 600px;
+    max-width: 60%;
+    max-height: 400px;
+    margin-bottom: 75px;
+    &-wrapper {
       position: relative;
-      justify-content: center;
-      align-items: flex-end;
-      height: 100%;
-      &-content {
-        overflow: hidden;
-        min-width: 600px;
-        max-width: 60%;
-        max-height: 400px;
-        margin-bottom: 75px;
-        &-box {
-          text-align: center;
-          font-family: OpenSansLight;
-          margin-top: 125px;
-          margin-bottom: 100px;
-          &-title{
-            font-size: 62px;
-          &-important {
-            font-family: OpenSansBold;
-          }
-          }
-          &-description {
-            margin-left: -5px;
-            font-size: 48px;
-            margin-bottom: 18px;
-            &-colored {
-              color: #0feb9e;
-            }
-          }
-          &-additional-text{
-            position: relative;
-            font-size: 18px;
-            margin-left: 2px;
-            &:before {
-              position: absolute;
-              top: 50%;
-              left: 152px;
-              content: '';
-              width: 28px;
-              border-bottom: 1px solid #0feb9e;
-              @media screen and (max-width: 900px) {
-                left: 50px;
-              }
-              @media screen and (max-width: 700px) {
-                left: 80px;
-              }
-            }
-            &:after {
-              position: absolute;
-              top: 50%;
-              right: 150px;
-              content: '';
-              width: 28px;
-              border-bottom: 1px solid #0feb9e;
-              @media screen and (max-width: 900px) {
-                right: 50px;
-              }
-              @media screen and (max-width: 700px) {
-                right: 80px;
-              }
-            }
-          }
-        }
-        &-wrapper {
-          position: relative;
-          height: 300px;
+      height: 300px;
+      transition: all 1s;
+    }
+    &-box {
+      transition: all 0.3s;
+      filter: opacity(0);
+      text-align: center;
+      font-family: OpenSansLight;
+      margin-top: 125px;
+      margin-bottom: 100px;
+      &_active {
+        filter: opacity(1);
+      }
+      &-title{
+        font-size: 62px;
+        &-important {
+          font-family: OpenSansBold;
         }
       }
-      &-controls {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        top: 41%;
-        right: 3%;
-        &-button {
-          cursor: pointer;
-          width: 8px;
-          height: 8px;
-          margin: 7px 0;
-          border-radius: 50%;
-          border: 1px solid #fff;
-          &:hover {
-            transform: scale(1.5);
-          }
-          &_active {
-            background-color: #fff;
+      &-description {
+        margin-left: -5px;
+        font-size: 48px;
+        margin-bottom: 18px;
+        &-colored {
+          color: #0feb9e;
+        }
+      }
+      &-additional-text{
+        position: relative;
+        font-size: 18px;
+        margin-left: 2px;
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 152px;
+          content: '';
+          width: 28px;
+          border-bottom: 1px solid #0feb9e;
+          @media screen and (max-width: 1100px) {
+            left: 120px;
           }
         }
+        &:after {
+          position: absolute;
+          top: 50%;
+          right: 150px;
+          content: '';
+          width: 28px;
+          border-bottom: 1px solid #0feb9e;
+          @media screen and (max-width: 1100px) {
+            right: 120px;
+          }
+        }
+      }
+    }
+  }
+  &-controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 41%;
+    right: 3%;
+    &-button {
+      cursor: pointer;
+      width: 8px;
+      height: 8px;
+      margin: 7px 0;
+      border-radius: 50%;
+      border: 1px solid #fff;
+      &:hover {
+        transform: scale(1.5);
+      }
+      &_active {
+        background-color: #fff;
       }
     }
   }
@@ -225,11 +233,6 @@
 
 .socials {
   position: absolute;
-  left: 46%;
-  bottom: 48px;
-  @media screen and (max-width: 640px) {
-    left: 40%;
-  }
   &__list{
     display: flex;
     &-item {
