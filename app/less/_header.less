@@ -43,9 +43,10 @@
       height: 100%;
       &-content {
         overflow: hidden;
+        min-width: 600px;
         max-width: 60%;
-        max-height: 300px;
-        margin-bottom: 175px;
+        max-height: 400px;
+        margin-bottom: 75px;
         &-box {
           text-align: center;
           font-family: OpenSansLight;
@@ -72,7 +73,7 @@
             &:before {
               position: absolute;
               top: 50%;
-              left: 115px;
+              left: 152px;
               content: '';
               width: 28px;
               border-bottom: 1px solid #0feb9e;
@@ -80,13 +81,13 @@
                 left: 50px;
               }
               @media screen and (max-width: 700px) {
-                left: 20px;
+                left: 80px;
               }
             }
             &:after {
               position: absolute;
               top: 50%;
-              right: 110px;
+              right: 150px;
               content: '';
               width: 28px;
               border-bottom: 1px solid #0feb9e;
@@ -94,7 +95,7 @@
                 right: 50px;
               }
               @media screen and (max-width: 700px) {
-                right: 20px;
+                right: 80px;
               }
             }
           }
@@ -226,6 +227,9 @@
   position: absolute;
   left: 46%;
   bottom: 48px;
+  @media screen and (max-width: 640px) {
+    left: 40%;
+  }
   &__list{
     display: flex;
     &-item {
