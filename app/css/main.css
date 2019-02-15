@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Pacifico";
+  src: url(../fonts/pacifico.ttf) format("truetype");
+}
+@font-face {
+  font-family: "OpenSansLight";
+  src: url(../fonts/open-sans-light.ttf) format("truetype");
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  background: url('../img/header_bg.jpg') no-repeat center center;
+  background-clip: content-box;
+}
+.header__upper-header {
+  display: flex;
+  height: 70px;
+  background-color: rgba(16, 22, 54, 0.2);
+}
+.logo {
+  position: relative;
+  display: flex;
+  height: 100%;
+  color: #fff;
+  justify-content: center;
+}
+.logo__title {
+  display: flex;
+  font: 28px Pacifico;
+  align-items: flex-end;
+  margin-left: 38px;
+  margin-right: 52px;
+  letter-spacing: 1px;
+}
+.logo__additional-text {
+  margin-top: 7px;
+  display: flex;
+  font: 13px OpenSansLight;
+  color: rgba(255, 255, 255, 0.3);
+  align-items: center;
+  letter-spacing: 0.7px;
+}
+.logo__additional-text:before {
+  position: absolute;
+  top: 32px;
+  left: 52.2%;
+  content: '';
+  border-left: 1px solid #204458;
+  width: 20px;
+  height: 18px;
+}
+.navigation__list {
+  display: flex;
+  height: 100%;
+}
+* {
+  transition: all 1s;
+}
+body {
+  max-width: 1600px;
+  min-width: 640px;
+  margin: 0 auto !important;
+  padding: 0;
+}
+ul,
+ul li,
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
