@@ -6,6 +6,10 @@
   font-family: "OpenSansLight";
   src: url(../fonts/open-sans-light.ttf) format("truetype");
 }
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url(../fonts/open-sans.ttf) format("truetype");
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -17,10 +21,12 @@
   display: flex;
   height: 70px;
   background-color: rgba(16, 22, 54, 0.2);
+  font-size: 13px;
 }
 .logo {
   position: relative;
   display: flex;
+  min-width: 300px;
   height: 100%;
   color: #fff;
   justify-content: center;
@@ -29,14 +35,14 @@
   display: flex;
   font: 28px Pacifico;
   align-items: flex-end;
-  margin-left: 38px;
+  margin-left: 22px;
   margin-right: 52px;
   letter-spacing: 1px;
 }
 .logo__additional-text {
   margin-top: 7px;
   display: flex;
-  font: 13px OpenSansLight;
+  font-family: OpenSansLight;
   color: rgba(255, 255, 255, 0.3);
   align-items: center;
   letter-spacing: 0.7px;
@@ -44,15 +50,71 @@
 .logo__additional-text:before {
   position: absolute;
   top: 32px;
-  left: 52.2%;
+  left: 50.2%;
   content: '';
   border-left: 1px solid #204458;
   width: 20px;
   height: 18px;
 }
+@media screen and (max-width: 990px) {
+  .navigation {
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 640px;
+    height: 70px;
+    justify-content: space-between;
+  }
+}
 .navigation__list {
+  margin-right: 52px;
+  letter-spacing: 0.8px;
+  justify-content: flex-end;
   display: flex;
   height: 100%;
+}
+@media screen and (max-width: 990px) {
+  .navigation__list {
+    margin: 0 auto;
+    max-width: 80%;
+    justify-content: space-between;
+  }
+}
+.navigation__list-item {
+  box-sizing: content-box;
+  margin: 0 17px;
+  height: 100%;
+}
+.navigation__list-item-link {
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid transparent;
+  height: 100%;
+  color: #fff;
+}
+@media screen and (max-width: 990px) {
+  .navigation__list-item-link {
+    padding: 20px 20px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .navigation__list-item-link {
+    padding: 20px 10px;
+  }
+}
+.navigation__list-item-link_active {
+  border-top: 2px solid #32b0ee;
+}
+@media screen and (max-width: 990px) {
+  .navigation__list-item-link_active {
+    border-top: 2px solid transparent;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+.navigation__list-item-link:hover {
+  padding-top: 8px;
+  border-top: 2px solid #32b0ee;
+  color: #fff;
 }
 * {
   transition: all 1s;
@@ -69,8 +131,14 @@ p,
 h1,
 h2,
 h3,
-h4 {
+h4,
+a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-decoration: none;
+}
+.row {
+  padding: 0 !important;
+  margin: 0 !important;
 }
