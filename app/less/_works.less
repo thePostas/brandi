@@ -42,6 +42,15 @@
     flex-wrap: wrap;
     overflow: auto;
     height: 600px;
+    @media screen and (max-width: 1600px) {
+      width: 800px;
+      margin: 38px auto;
+    }
+    @media screen and (max-width: 800px) {
+      width: 400px;
+      height: 600px;
+      margin: 38px auto;
+    }
     &-wrapper {
 
     }
@@ -55,12 +64,21 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    &:hover .photography__photo-container-watch {
-      transform: translateY(0);
+    &-link {
+      position: absolute;
+      width: 400px;
+      height: 300px;
+      display: block;
+      &:hover .photography__photo-container-watch {
+        transform: translateY(0);
+      }
     }
+    //&:hover .photography__photo-container-watch {
+    //  transform: translateY(0);
+    //}
     &-watch {
       display: flex;
-      position: absolute;
+      position: relative;
       flex-direction: column;
       justify-content: center;
       align-items: center;
