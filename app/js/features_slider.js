@@ -32,6 +32,6 @@ function featuresAutoScroll() {
     setTimeout(function () {
         featuresSlide(featuresButtonPosition);
         featuresAutoScroll();
-    }, 5000);
+    }, 6000);
 }
 featuresAutoScroll();

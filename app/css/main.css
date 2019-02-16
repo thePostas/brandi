@@ -395,6 +395,96 @@
   border: 1px solid #062033;
   background-color: #062033;
 }
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px ;
+}
+.works__text-content {
+  font: 18px OpenSansSemiBold;
+  text-align: center;
+  width: 60%;
+  margin-top: 25px;
+}
+.photography {
+  width: 100%;
+}
+.photography__sort {
+  margin: 48px 0 0 20px;
+  display: flex;
+  justify-content: center;
+}
+.photography__sort-buttons {
+  display: flex;
+}
+.photography__sort-buttons-item {
+  margin: 0 5px 0 4px;
+}
+.photography__sort-buttons-link {
+  display: inline-block;
+  font: 14px OpenSansBold;
+  color: #062033;
+  padding: 5px 20px;
+}
+.photography__sort-buttons-link_active,
+.photography__sort-buttons-link:hover {
+  color: #fff;
+  padding: 5px 20px;
+  background-color: #0eb493;
+  border-radius: 5px;
+}
+.photography__images-block {
+  margin-top: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  height: 600px;
+}
+.photography__image,
+.photography__photo-container-watch,
+.photography__photo-container {
+  width: 400px;
+  height: 300px;
+}
+.photography__photo-container {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.photography__photo-container:hover .photography__photo-container-watch {
+  transform: translateY(0);
+}
+.photography__photo-container-watch {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  transform: translateY(300px);
+  background: rgba(14, 180, 147, 0.9) url("../img/works_eye.png") no-repeat 50% 38%;
+  text-align: center;
+  color: #fff;
+}
+.photography__photo-container-watch-title {
+  margin-top: 65px;
+  font: 18px OpenSansBold;
+}
+.photography__photo-container-watch-category {
+  font: 14px OpenSansRegular;
+  margin-top: -4px;
+}
+.photography__photo-container-watch:before {
+  content: '';
+  position: absolute;
+  top: 31.5%;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
 body {
   max-width: 1600px;
   min-width: 640px;

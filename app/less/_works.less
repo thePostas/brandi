@@ -1,0 +1,91 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px ;
+  &__text-content {
+    font: 18px OpenSansSemiBold;
+    text-align: center;
+    width: 60%;
+    margin-top: 25px;
+  }
+}
+
+.photography {
+  width: 100%;
+  &__sort {
+    margin: 48px 0 0 20px;
+    display: flex;
+    justify-content: center;
+    &-buttons {
+      display: flex;
+      &-item {
+        margin: 0 5px 0 4px;
+      }
+      &-link {
+        display: inline-block;
+        font: 14px OpenSansBold;
+        color: #062033;
+        padding: 5px 20px;
+        &_active, &:hover {
+          color: #fff;
+          padding: 5px 20px;
+          background-color: #0eb493;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  &__images-block {
+    margin-top: 38px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    height: 600px;
+    &-wrapper {
+
+    }
+  }
+  &__image, &__photo-container-watch, &__photo-container {
+    width: 400px;
+    height: 300px;
+  }
+  &__photo-container {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &:hover .photography__photo-container-watch {
+      transform: translateY(0);
+    }
+    &-watch {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 1s;
+      transform: translateY(300px);
+      background: rgba(14, 180, 147, 0.9) url("../img/works_eye.png") no-repeat 50% 38%;
+      text-align: center;
+      color: #fff;
+      &-title {
+        margin-top: 65px;
+        font: 18px OpenSansBold;
+      }
+      &-category {
+        font: 14px OpenSansRegular;
+        margin-top: -4px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        top: 31.5%;
+        width: 38px;
+        height: 38px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+      }
+    }
+  }
+}
