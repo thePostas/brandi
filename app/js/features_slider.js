@@ -1,5 +1,4 @@
 var featuresBoxes = document.getElementsByClassName('features-slider__content-box');
-console.log(featuresBoxes.length);
 var featuresSliderContent = document.getElementsByClassName('features-slider__inner-content')[0];
 var featuresButtons = document.getElementsByClassName('features-slider__controls-button');
 var featuresScrolledContainer = document.getElementsByClassName('features-slider__inner-content')[0];

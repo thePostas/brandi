@@ -420,17 +420,15 @@
 }
 .photography__sort-buttons-item {
   margin: 0 5px 0 4px;
-}
-.photography__sort-buttons-link {
   display: inline-block;
   font: 14px OpenSansBold;
   color: #062033;
   padding: 5px 20px;
+  cursor: pointer;
 }
-.photography__sort-buttons-link_active,
-.photography__sort-buttons-link:hover {
+.photography__sort-buttons-item_active,
+.photography__sort-buttons-item:hover {
   color: #fff;
-  padding: 5px 20px;
   background-color: #0eb493;
   border-radius: 5px;
 }
@@ -463,8 +461,11 @@
 .photography__photo-container {
   overflow: hidden;
   position: relative;
-  display: flex;
+  display: none;
   flex-direction: column;
+}
+.photography__photo-container_active {
+  display: flex;
 }
 .photography__photo-container-link {
   position: absolute;

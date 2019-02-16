@@ -21,15 +21,13 @@
       display: flex;
       &-item {
         margin: 0 5px 0 4px;
-      }
-      &-link {
         display: inline-block;
         font: 14px OpenSansBold;
         color: #062033;
         padding: 5px 20px;
+        cursor: pointer;
         &_active, &:hover {
           color: #fff;
-          padding: 5px 20px;
           background-color: #0eb493;
           border-radius: 5px;
         }
@@ -62,8 +60,11 @@
   &__photo-container {
     overflow: hidden;
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
+    &_active {
+      display: flex;
+    }
     &-link {
       position: absolute;
       width: 400px;
