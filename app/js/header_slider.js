@@ -24,10 +24,10 @@ function slide(buttonPosition) {
         }
 }
 
-// function autoScroll() {
-//     setTimeout(function () {
-//         slide(autoScrollPosition);
-//         autoScroll();
-//     }, 5000);
-// }
-// autoScroll();
+function autoScroll() {
+    setTimeout(function () {
+        slide(autoScrollPosition);
+        autoScroll();
+    }, 5000);
+}
+autoScroll();

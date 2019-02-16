@@ -278,6 +278,16 @@
   height: 460px;
   background-color: #f4f7f9;
 }
+@media screen and (max-width: 1100px) {
+  .features {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .features {
+    height: 800px;
+  }
+}
 .block-title {
   position: relative;
   text-transform: uppercase;
@@ -310,6 +320,12 @@
   padding-right: 21px;
   margin-left: 30px;
 }
+@media screen and (max-width: 1000px) {
+  .features-slider__content-box-element {
+    max-width: 100%;
+    padding: 0;
+  }
+}
 .features-slider__content-box-element-title {
   font: 20px OpenSansSemiBold;
   margin-bottom: 18px;
@@ -330,6 +346,11 @@
   transition: all 0.5s;
   filter: opacity(0);
 }
+@media screen and (max-width: 1000px) {
+  .features-slider__content-box {
+    flex-direction: column;
+  }
+}
 .features-slider__content-box-element_first {
   background: url('../img/features_feather.png') no-repeat 0px 4px;
 }
@@ -340,6 +361,19 @@
 .features-slider__content-box-element_third {
   margin-left: 28px;
   background: url('../img/features_megaphone.png') no-repeat 0px 4px;
+}
+@media screen and (max-width: 1000px) {
+  .features-slider__content-box-element {
+    flex-direction: column;
+    margin-bottom: 10%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .features-slider__content-box-element {
+    background-position: 0px 55%;
+    background-size: 10%;
+    padding-left: 80px;
+  }
 }
 .features-slider__content-box_active {
   filter: opacity(1);

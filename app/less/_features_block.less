@@ -17,9 +17,12 @@
   padding-top: 68px;
   height: 460px;
   background-color: #f4f7f9;
-  //@media screen and (max-width: 1000px) {
-  //  height: 1000px;
-  //}
+  @media screen and (max-width: 1100px) {
+    height: 550px;
+  }
+  @media screen and (max-width: 1000px) {
+    height: 800px;
+  }
 }
 
 .block-title {
@@ -53,6 +56,10 @@
       padding-left: 55px;
       padding-right: 21px;
       margin-left: 30px;
+      @media screen and (max-width: 1000px) {
+        max-width: 100%;
+        padding: 0;
+      }
       &-title {
         font: 20px OpenSansSemiBold;
         margin-bottom: 18px;
@@ -70,12 +77,15 @@
     height: 65%;
     width: 75%;
     overflow: hidden;
+    @media screen and (max-width: 1000px) {
+
+    }
     &-box {
       transition: all 0.5s;
       filter: opacity(0);
-      //@media screen and (max-width: 1000px) {
-      //  flex-direction: column;
-      //}
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+      }
       &-element {
         &_first {
           background: url('../img/features_feather.png') no-repeat 0px 4px;
@@ -87,6 +97,15 @@
         &_third {
           margin-left: 28px;
           background: url('../img/features_megaphone.png') no-repeat 0px 4px;
+        }
+        @media screen and (max-width: 1000px) {
+          flex-direction: column;
+          margin-bottom: 10%;
+        }
+        @media screen and (max-width: 1000px) {
+          background-position:0px 55%;
+          background-size: 10%;
+          padding-left: 80px;
         }
       }
       &_active {
