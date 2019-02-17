@@ -31,3 +31,17 @@ function autoScroll() {
     }, 5000);
 }
 autoScroll();
+
+
+var mobileMenuButton = document.getElementsByClassName('mobile-menu__button')[0];
+var mobileMenu = document.getElementsByClassName('mobile-menu__list')[0];
+
+mobileMenuButton.addEventListener('click', function () {
+   if (mobileMenu.classList.contains('mobile-menu__list_active')) {
+       mobileMenu.classList.remove('mobile-menu__list_active');
+       mobileMenuButton.classList.remove('mobile-menu__button_active');
+   } else {
+       mobileMenu.classList.add('mobile-menu__list_active');
+       mobileMenuButton.classList.add('mobile-menu__button_active');
+   }
+});
