@@ -1,0 +1,121 @@
+.team {
+  max-width: 1600px;
+  height: 925px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 90px;
+  &__text-content {
+    font: 18px OpenSansSemiBold;
+    text-align: center;
+    width: 60%;
+    margin-top: 27px;
+  }
+  &__lower-side {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  &-slider {
+    width: 1170px;
+    min-height: 474px;
+    margin: 0 auto;
+    @media screen and (max-width: 1200px) {
+      margin-top: 100px;
+    }
+    &__content {
+      @media screen and (max-width: 1200px) {
+        width: 585px;
+        margin: 100px auto 0 auto;
+      }
+      &-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__container, &__contacts {
+      width: 270px;
+      height: 300px;
+    }
+    &__photo {
+      filter: grayscale(100%);
+
+    }
+    &__container {
+      overflow: hidden;
+      margin-bottom: 18px;
+      &:hover .team-slider__photo {
+        filter: grayscale(0);
+      }
+    }
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 18px 18px;
+      transition: all 2s;
+      background-color: rgba(26, 183, 152, 0.9);
+      color: #fff;
+      &-title {
+        font: 16px OpenSansSemiBold, sans-serif;
+        margin-bottom: 15px;
+      }
+      &-description {
+        font: 16px OpenSansRegular, sans-serif;
+        line-height: 1.5;
+      }
+    }
+    &__profile {
+      width: 270px;
+      height: 100%;
+      text-align: center;
+      :hover .team-slider__contacts {
+        transform: translateY(-300px);
+      }
+      :hover ~ .team-slider__profile-name {
+        color: #1ab798 !important;
+      }
+      &-name {
+        font: 18px OpenSansSemiBold;
+      }
+      &-profession {
+        font: 13px OpenSansRegular;
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
+.profile-socials {
+  &__list {
+    margin-top: 65px;
+    margin-left: 5px;
+    display: flex;
+  }
+  &__item {
+    background: rgba(0, 0, 0, 0.3) url("../img/works_sprites.png") no-repeat;
+    margin: 2px;
+
+    &_twitter {
+      background-position: -43px 0;
+    }
+    &_facebook {
+      background-position: -80px 0;
+    }
+    &_google {
+      background-position: 0 0;
+    }
+  }
+  &__link {
+    display: block;
+    width: 42px;
+    height: 42px;
+  }
+}

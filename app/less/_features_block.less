@@ -30,7 +30,7 @@
   text-transform: uppercase;
   color: #0eb493;
   text-align: center;
-  font: 28px OpenSansExtraBold;
+  font: 28px OpenSansExtraBold, sans-serif;
   padding-bottom: 35px;
   background: url("../img/title_bg.png") no-repeat 50% 90%;
 }
@@ -61,12 +61,12 @@
         padding: 0;
       }
       &-title {
-        font: 20px OpenSansSemiBold;
+        font: 20px OpenSansSemiBold, sans-serif;
         margin-bottom: 18px;
       }
       &-text {
         text-align: justify;
-        font: 13px OpenSansRegular;
+        font: 13px OpenSansRegular, sans-serif;
         line-height: 21px;
         letter-spacing: -0.2px;
       }
@@ -78,13 +78,14 @@
     width: 75%;
     overflow: hidden;
     @media screen and (max-width: 1000px) {
-
+      width: 85%;
     }
     &-box {
       transition: all 0.5s;
       filter: opacity(0);
       @media screen and (max-width: 1000px) {
         flex-direction: column;
+        width: 100%;
       }
       &-element {
         &_first {
@@ -104,7 +105,7 @@
         }
         @media screen and (max-width: 1000px) {
           background-position:0px 55%;
-          background-size: 10%;
+          //background-size: 10%;
           padding-left: 80px;
         }
       }

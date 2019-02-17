@@ -4,7 +4,7 @@
   align-items: center;
   padding-top: 90px ;
   &__text-content {
-    font: 18px OpenSansSemiBold;
+    font: 18px OpenSansSemiBold, sans-serif;
     text-align: center;
     width: 60%;
     margin-top: 25px;
@@ -22,7 +22,7 @@
       &-item {
         margin: 0 5px 0 4px;
         display: inline-block;
-        font: 14px OpenSansBold;
+        font: 14px OpenSansBold, sans-serif;
         color: #062033;
         padding: 5px 20px;
         cursor: pointer;
@@ -35,6 +35,7 @@
     }
   }
   &__images-block {
+    width: 100%;
     margin-top: 38px;
     display: flex;
     flex-wrap: wrap;
@@ -42,6 +43,7 @@
     height: 600px;
     @media screen and (max-width: 1600px) {
       width: 800px;
+      flex-wrap: wrap;
       margin: 38px auto;
     }
     @media screen and (max-width: 800px) {
@@ -90,10 +92,10 @@
       color: #fff;
       &-title {
         margin-top: 65px;
-        font: 18px OpenSansBold;
+        font: 18px OpenSansBold, sans-serif;
       }
       &-category {
-        font: 14px OpenSansRegular;
+        font: 14px OpenSansRegular, sans-serif;
         margin-top: -4px;
       }
       &:before {
