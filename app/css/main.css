@@ -219,6 +219,11 @@
   margin-right: 52px;
   letter-spacing: 1px;
 }
+@media screen and (max-width: 350px) {
+  .logo__title {
+    margin-left: 60px;
+  }
+}
 .logo__additional-text {
   margin-top: 7px;
   display: flex;
@@ -226,6 +231,11 @@
   color: rgba(255, 255, 255, 0.3);
   align-items: center;
   letter-spacing: 0.7px;
+}
+@media screen and (max-width: 350px) {
+  .logo__additional-text {
+    text-align: center;
+  }
 }
 .logo__additional-text:before {
   position: absolute;
@@ -508,6 +518,7 @@
 @media screen and (max-width: 600px) {
   .photography__sort-buttons {
     flex-direction: column;
+    text-align: center;
   }
 }
 .photography__sort-buttons-item {
@@ -530,7 +541,7 @@
   border-radius: 5px;
 }
 .photography__images-block {
-  width: 100%;
+  width: 100.2%;
   margin-top: 38px;
   display: flex;
   flex-wrap: wrap;
@@ -539,19 +550,19 @@
 }
 @media screen and (max-width: 1600px) {
   .photography__images-block {
-    width: 800px;
+    width: 804px;
     flex-wrap: wrap;
     margin: 38px auto;
   }
 }
 @media screen and (max-width: 800px) {
   .photography__images-block {
-    width: 400px;
+    width: 404px;
     height: 600px;
     margin: 38px auto;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .photography__images-block {
     width: 320px;
     height: 480px;
@@ -569,7 +580,7 @@
   .photography__photo-container-watch,
   .photography__photo-container,
   .photography__photo-container-link {
-    width: 320px;
+    width: 316px;
     height: 240px;
   }
 }
@@ -768,4 +779,28 @@ a:hover {
 .row {
   padding: 0 !important;
   margin: 0 !important;
+}
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-button {
+  background-color: #32b0ee;
+}
+::-webkit-scrollbar-track {
+  background-color: #999;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #32b0ee;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-corner {
+  background-color: #999;
+}
+::-webkit-resizer {
+  background-color: #32b0ee;
 }
