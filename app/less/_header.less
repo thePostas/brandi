@@ -54,7 +54,7 @@
   height: 100%;
   &-content {
     overflow: hidden;
-    min-width: 600px;
+    min-width: 320px;
     max-width: 60%;
     max-height: 400px;
     margin-bottom: 75px;
@@ -181,9 +181,12 @@
   @media screen and (max-width: 990px) {
     box-sizing: border-box;
     max-width: 100%;
-    min-width: 600px;
+    min-width: 320px;
     height: 70px;
     justify-content: space-between;
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
   }
   &__list {
     margin-right: 52px;

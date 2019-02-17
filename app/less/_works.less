@@ -17,8 +17,16 @@
     margin: 48px 0 0 20px;
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 600px) {
+      width: 320px;
+      margin: 50px auto;
+    }
     &-buttons {
       display: flex;
+      @media screen and (max-width: 600px) {
+        flex-direction: column;
+      }
       &-item {
         margin: 0 5px 0 4px;
         display: inline-block;
@@ -26,6 +34,9 @@
         color: #062033;
         padding: 5px 20px;
         cursor: pointer;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
         &_active, &:hover {
           color: #fff;
           background-color: #0eb493;
@@ -52,13 +63,21 @@
       height: 600px;
       margin: 38px auto;
     }
+    @media screen and (max-width: 800px) {
+      width: 320px;
+      height: 480px;
+    }
     &-wrapper {
 
     }
   }
-  &__image, &__photo-container-watch, &__photo-container {
+  &__image, &__photo-container-watch, &__photo-container, &__photo-container-link {
     width: 400px;
     height: 300px;
+    @media screen and (max-width: 600px) {
+      width: 320px;
+      height: 240px;
+    }
   }
   &__photo-container {
     overflow: hidden;
@@ -70,8 +89,6 @@
     }
     &-link {
       position: absolute;
-      width: 400px;
-      height: 300px;
       display: block;
       &:hover .photography__photo-container-watch {
         transform: translateY(0);
