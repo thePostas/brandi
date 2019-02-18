@@ -33,6 +33,7 @@
 @media screen and (max-width: 640px) {
   .header__socials {
     left: 40%;
+    bottom: 15px;
   }
 }
 .mobile-menu {
@@ -140,6 +141,11 @@
 .header-slider-content-box-title {
   font-size: 62px;
 }
+@media screen and (max-width: 1000px) {
+  .header-slider-content-box-title {
+    font-size: 48px;
+  }
+}
 .header-slider-content-box-title-important {
   font-family: OpenSansBold, sans-serif;
 }
@@ -147,6 +153,11 @@
   margin-left: -5px;
   font-size: 48px;
   margin-bottom: 18px;
+}
+@media screen and (max-width: 1000px) {
+  .header-slider-content-box-description {
+    font-size: 32px;
+  }
 }
 .header-slider-content-box-description-colored {
   color: #0feb9e;
@@ -166,7 +177,7 @@
 }
 @media screen and (max-width: 1100px) {
   .header-slider-content-box-additional-text:before {
-    left: 120px;
+    display: none;
   }
 }
 .header-slider-content-box-additional-text:after {
@@ -179,7 +190,7 @@
 }
 @media screen and (max-width: 1100px) {
   .header-slider-content-box-additional-text:after {
-    right: 120px;
+    display: none;
   }
 }
 .header-slider-controls {
@@ -366,7 +377,7 @@
 }
 @media screen and (max-width: 1000px) {
   .features {
-    height: 800px;
+    height: 900px;
   }
 }
 .block-title {
@@ -386,36 +397,33 @@
   align-items: center;
   height: 100%;
 }
+.features-slider__controls {
+  display: flex;
+  position: absolute;
+  bottom: 55px;
+  left: 47.8%;
+}
+@media screen and (max-width: 600px) {
+  .features-slider__controls {
+    left: 40%;
+    bottom: 10px;
+  }
+}
+.features-slider__controls-button {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #d4dade;
+  border-radius: 50%;
+  margin: 0 8px;
+}
+.features-slider__controls-button_active {
+  border: 1px solid #062033;
+  background-color: #062033;
+}
 .features-slider__inner-content {
   position: absolute;
   display: flex;
   transition: all 1s;
-}
-.features-slider__content-box {
-  display: flex;
-}
-.features-slider__content-box-element {
-  color: #062033;
-  max-width: 33%;
-  padding-left: 55px;
-  padding-right: 21px;
-  margin-left: 30px;
-}
-@media screen and (max-width: 1000px) {
-  .features-slider__content-box-element {
-    max-width: 100%;
-    padding: 0;
-  }
-}
-.features-slider__content-box-element-title {
-  font: 20px OpenSansSemiBold, sans-serif;
-  margin-bottom: 18px;
-}
-.features-slider__content-box-element-text {
-  text-align: justify;
-  font: 13px OpenSansRegular, sans-serif;
-  line-height: 21px;
-  letter-spacing: -0.2px;
 }
 .features-slider__content {
   position: relative;
@@ -426,14 +434,12 @@
 @media screen and (max-width: 1000px) {
   .features-slider__content {
     width: 85%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .features-slider__content {
-    height: 120%;
+    height: 100%;
   }
 }
 .features-slider__content-box {
+  display: flex;
+  width: 100%;
   transition: all 0.5s;
   filter: opacity(0);
 }
@@ -442,6 +448,16 @@
     flex-direction: column;
     width: 100%;
   }
+}
+.features-slider__content-box_active {
+  filter: opacity(1);
+}
+.features-slider__content-box-element {
+  color: #062033;
+  width: 33%;
+  padding-left: 55px;
+  padding-right: 21px;
+  margin-left: 30px;
 }
 .features-slider__content-box-element_first {
   background: url('../img/features_feather.png') no-repeat 0px 4px;
@@ -456,35 +472,22 @@
 }
 @media screen and (max-width: 1000px) {
   .features-slider__content-box-element {
+    width: 90%;
     flex-direction: column;
     margin-bottom: 10%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .features-slider__content-box-element {
     background-position: 0px 55%;
     padding-left: 80px;
   }
 }
-.features-slider__content-box_active {
-  filter: opacity(1);
+.features-slider__content-box-element-title {
+  font: 20px OpenSansSemiBold, sans-serif;
+  margin-bottom: 18px;
 }
-.features-slider__controls {
-  display: flex;
-  position: absolute;
-  bottom: 55px;
-  left: 47.8%;
-}
-.features-slider__controls-button {
-  width: 8px;
-  height: 8px;
-  border: 1px solid #d4dade;
-  border-radius: 50%;
-  margin: 0 8px;
-}
-.features-slider__controls-button_active {
-  border: 1px solid #062033;
-  background-color: #062033;
+.features-slider__content-box-element-text {
+  text-align: justify;
+  font: 13px OpenSansRegular, sans-serif;
+  line-height: 21px;
+  letter-spacing: -0.2px;
 }
 .works {
   display: flex;
@@ -636,7 +639,7 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding-top: 90px;
+  padding-top: 55px;
 }
 .team__text-content {
   font: 18px OpenSansSemiBold;

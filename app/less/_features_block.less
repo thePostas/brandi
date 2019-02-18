@@ -21,7 +21,7 @@
     height: 550px;
   }
   @media screen and (max-width: 1000px) {
-    height: 800px;
+    height: 900px;
   }
 }
 
@@ -42,86 +42,15 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-
-  &__inner-content {
-    position: absolute;
-    display: flex;
-    transition: all 1s;
-  }
-  &__content-box {
-    display: flex;
-    &-element {
-      color: @blocks-text-color;
-      max-width: 33%;
-      padding-left: 55px;
-      padding-right: 21px;
-      margin-left: 30px;
-      @media screen and (max-width: 1000px) {
-        max-width: 100%;
-        padding: 0;
-      }
-      &-title {
-        font: 20px OpenSansSemiBold, sans-serif;
-        margin-bottom: 18px;
-      }
-      &-text {
-        text-align: justify;
-        font: 13px OpenSansRegular, sans-serif;
-        line-height: 21px;
-        letter-spacing: -0.2px;
-      }
-    }
-  }
-  &__content {
-    position: relative;
-    height: 65%;
-    width: 75%;
-    overflow: hidden;
-    @media screen and (max-width: 1000px) {
-      width: 85%;
-    }
-    @media screen and (max-width: 600px) {
-      height: 120%;
-    }
-    &-box {
-      transition: all 0.5s;
-      filter: opacity(0);
-      @media screen and (max-width: 1000px) {
-        flex-direction: column;
-        width: 100%;
-      }
-      &-element {
-        &_first {
-          background: url('../img/features_feather.png') no-repeat 0px 4px;
-        }
-        &_second {
-          margin-left: 27px;
-          background: url('../img/features_pencil.png') no-repeat 0px 4px;
-        }
-        &_third {
-          margin-left: 28px;
-          background: url('../img/features_megaphone.png') no-repeat 0px 4px;
-        }
-        @media screen and (max-width: 1000px) {
-          flex-direction: column;
-          margin-bottom: 10%;
-        }
-        @media screen and (max-width: 1000px) {
-          background-position:0px 55%;
-          //background-size: 10%;
-          padding-left: 80px;
-        }
-      }
-      &_active {
-        filter: opacity(1);
-      }
-    }
-  }
   &__controls {
     display: flex;
     position: absolute;
     bottom: 55px;
     left: 47.8%;
+    @media screen and (max-width: 600px) {
+      left: 40%;
+      bottom: 10px;
+  }
     &-button {
       width: 8px;
       height: 8px;
@@ -134,4 +63,70 @@
       }
     }
   }
+  &__inner-content {
+    position: absolute;
+    display: flex;
+    transition: all 1s;
+  }
+
+  &__content {
+    position: relative;
+    height: 65%;
+    width: 75%;
+    overflow: hidden;
+    @media screen and (max-width: 1000px) {
+      width: 85%;
+      height: 100%;
+    }
+    &-box {
+      display: flex;
+      width: 100%;
+      transition: all 0.5s;
+      filter: opacity(0);
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        width: 100%;
+      }
+      &_active {
+        filter: opacity(1);
+      }
+      &-element {
+        color: @blocks-text-color;
+        width: 33%;
+        padding-left: 55px;
+        padding-right: 21px;
+        margin-left: 30px;
+        &_first {
+          background: url('../img/features_feather.png') no-repeat 0px 4px;
+        }
+        &_second {
+          margin-left: 27px;
+          background: url('../img/features_pencil.png') no-repeat 0px 4px;
+        }
+        &_third {
+          margin-left: 28px;
+          background: url('../img/features_megaphone.png') no-repeat 0px 4px;
+        }
+        @media screen and (max-width: 1000px) {
+          width: 90%;
+          flex-direction: column;
+          margin-bottom: 10%;
+          background-position: 0px 55%;
+          padding-left: 80px;
+        }
+        &-title {
+          font: 20px OpenSansSemiBold, sans-serif;
+          margin-bottom: 18px;
+        }
+        &-text {
+          text-align: justify;
+          font: 13px OpenSansRegular, sans-serif;
+          line-height: 21px;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+  }
 }
+
+

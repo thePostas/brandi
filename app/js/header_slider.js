@@ -17,7 +17,7 @@ function slide(buttonPosition) {
     autoScrollPosition = buttonPosition;
     headerBlocks[autoScrollPosition].classList.add('header-slider-content-box_active');
     headerButtons[autoScrollPosition].classList.add('header-slider-controls-button_active');
-    scrolledContainer.style.bottom = 300*(autoScrollPosition) + 'px';
+    scrolledContainer.style.transform =  'translateY(-' + 100*(autoScrollPosition) + '%)';
     autoScrollPosition++;
         if (autoScrollPosition === 3 ) {
             autoScrollPosition = 0;
