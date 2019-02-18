@@ -935,7 +935,7 @@ a:hover {
   background: url("../img/title_bg.png") no-repeat 50% 90%;
 }
 /* хром, сафари */
-.element::-webkit-scrollbar {
+.photography__images-block::-webkit-scrollbar {
   width: 0;
 }
 /* ie 10+ */
