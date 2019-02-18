@@ -1,0 +1,123 @@
+@font-face {
+  font-family: "OpenSansExtraBold";
+  src: url(../fonts/open-sans-extrabold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "OpenSansSemiBold";
+  src: url(../fonts/open-sans-semibold.ttf) format("truetype");
+}
+
+@blocks-text-color: #062033;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 68px;
+  height: 460px;
+  background-color: #f4f7f9;
+  @media screen and (max-width: 1100px) {
+    height: 550px;
+  }
+  @media screen and (max-width: 1000px) {
+    height: 900px;
+  }
+}
+
+.features-slider {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  &__controls {
+    display: flex;
+    position: absolute;
+    bottom: 55px;
+    left: 47.8%;
+    z-index: 100;
+    @media screen and (max-width: 600px) {
+      left: 40%;
+      bottom: 10px;
+  }
+    &-button {
+      width: 8px;
+      height: 8px;
+      border: 1px solid #d4dade;
+      border-radius: 50%;
+      margin: 0 8px;
+      &_active {
+        border: 1px solid @blocks-text-color;
+        background-color: @blocks-text-color;
+      }
+    }
+  }
+  &__inner-content {
+    position: absolute;
+    display: flex;
+    transition: all 1s;
+  }
+
+  &__content {
+    position: relative;
+    height: 65%;
+    width: 75%;
+    overflow: hidden;
+    @media screen and (max-width: 1000px) {
+      width: 85%;
+      height: 100%;
+    }
+    &-box {
+      display: flex;
+      width: 100%;
+      transition: all 0.5s;
+      filter: opacity(0);
+      @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        width: 100%;
+      }
+      &_active {
+        filter: opacity(1);
+      }
+      &-element {
+        color: @blocks-text-color;
+        width: 33%;
+        padding-left: 55px;
+        padding-right: 21px;
+        margin-left: 30px;
+        &_first {
+          background: url('../img/features_feather.png') no-repeat 0px 4px;
+        }
+        &_second {
+          margin-left: 27px;
+          background: url('../img/features_pencil.png') no-repeat 0px 4px;
+        }
+        &_third {
+          margin-left: 28px;
+          background: url('../img/features_megaphone.png') no-repeat 0px 4px;
+        }
+        @media screen and (max-width: 1000px) {
+          width: 90%;
+          flex-direction: column;
+          margin-bottom: 10%;
+          background-position: 0px 55%;
+          padding-left: 80px;
+        }
+        &-title {
+          font: 20px OpenSansSemiBold, sans-serif;
+          margin-bottom: 18px;
+        }
+        &-text {
+          text-align: justify;
+          font: 13px OpenSansRegular, sans-serif;
+          line-height: 21px;
+          letter-spacing: -0.2px;
+        }
+      }
+    }
+  }
+}
+
+
