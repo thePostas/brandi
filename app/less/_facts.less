@@ -1,8 +1,89 @@
 .facts {
+  display: flex;
+  flex-direction: column;
   height: 600px;
   background: url("../img/facts_bg.jpg") no-repeat 50% 0;
   padding-top: 91px;
+  @media screen and (max-width: 1050px) {
+    padding-top: 30px;
+  }
   &__block-title {
     background: url("../img/title_bg_white.png") no-repeat 50% 90% !important;
+    margin-bottom: 21px;
+  }
+  &__content {
+    width: 72.2%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media screen and (max-width: 1500px) {
+      margin: 0;
+      justify-content: center;
+      align-self: center;
+      width: 100%;
+    }
+    @media screen and (max-width: 1050px) {
+      max-width: 600px;
+      min-width: 320px;
+    }
+    &-wrapper {
+      margin-top: 30px;
+      @media screen and (max-width: 510px) {
+        margin-top: 0;
+      }
+    }
+    &-counter {
+      font: 60px OpenSansSemiBold;
+      @media screen and (max-width: 1450px) {
+        font-size: 30px;
+      }
+    }
+    &-description {
+      margin-top: -2px;
+      text-transform: uppercase;
+      font: 18px OpenSansRegular;
+      @media screen and (max-width: 1450px) {
+        font-size: 14px;
+      }
+    }
+    &-item {
+      text-align: center;
+      color: #fff;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 256px;
+      min-height: 260px;
+      @media screen and (max-width: 1050px) {
+        transform-origin: top;
+        transform: scale(0.7);
+        margin-bottom: -50px;
+      }
+      @media screen and (max-width: 510px) {
+        transform-origin: top;
+        transform: scale(0.5);
+        margin-bottom: -150px;
+      }
+      &:before {
+        content: '';
+        width: 128px;
+        height: 128px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+      }
+      &_first {
+        background: url("../img/facts_clock.png") no-repeat 50% 20%;
+      }
+      &_second {
+        background: url("../img/facts_friends.png") no-repeat 50% 20%;
+      }
+      &_third {
+        background: url("../img/facts_rocket.png") no-repeat 50% 20%;
+      }
+      &_fourth {
+        background: url("../img/facts_cup.png") no-repeat 50% 20%;
+      }
+    }
   }
 }

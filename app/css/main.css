@@ -543,16 +543,16 @@
   border-radius: 5px;
 }
 .photography__images-block {
-  width: 101%;
+  width: 100%;
   height: 600px;
   margin-top: 38px;
   display: flex;
   flex-wrap: wrap;
   overflow: auto;
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1599px) {
   .photography__images-block {
-    width: 816px;
+    width: 800px;
     flex-wrap: wrap;
     margin: 38px auto;
   }
@@ -632,12 +632,12 @@
   border-radius: 50%;
 }
 .team {
+  box-sizing: border-box;
   max-width: 1600px;
   min-height: 925px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
   padding-top: 90px;
 }
 .team__text-content {
@@ -665,6 +665,7 @@
 @media screen and (max-width: 1200px) {
   .team-slider__content {
     width: 585px;
+    padding-bottom: 150px;
     margin: 0 auto;
   }
 }
@@ -746,9 +747,15 @@
   bottom: 13px;
   left: 47.2%;
 }
+@media screen and (max-width: 1200px) {
+  .team-slider__controls {
+    left: 47%;
+    bottom: 100px;
+  }
+}
 @media screen and (max-width: 600px) {
   .team-slider__controls {
-    left: 40%;
+    left: 45%;
     bottom: 30px;
   }
 }
@@ -790,12 +797,109 @@
   height: 42px;
 }
 .facts {
+  display: flex;
+  flex-direction: column;
   height: 600px;
   background: url("../img/facts_bg.jpg") no-repeat 50% 0;
   padding-top: 91px;
 }
+@media screen and (max-width: 1050px) {
+  .facts {
+    padding-top: 30px;
+  }
+}
 .facts__block-title {
   background: url("../img/title_bg_white.png") no-repeat 50% 90% !important;
+  margin-bottom: 21px;
+}
+.facts__content {
+  width: 72.2%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1500px) {
+  .facts__content {
+    margin: 0;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .facts__content {
+    max-width: 600px;
+    min-width: 320px;
+  }
+}
+.facts__content-wrapper {
+  margin-top: 30px;
+}
+@media screen and (max-width: 510px) {
+  .facts__content-wrapper {
+    margin-top: 0;
+  }
+}
+.facts__content-counter {
+  font: 60px OpenSansSemiBold;
+}
+@media screen and (max-width: 1450px) {
+  .facts__content-counter {
+    font-size: 30px;
+  }
+}
+.facts__content-description {
+  margin-top: -2px;
+  text-transform: uppercase;
+  font: 18px OpenSansRegular;
+}
+@media screen and (max-width: 1450px) {
+  .facts__content-description {
+    font-size: 14px;
+  }
+}
+.facts__content-item {
+  text-align: center;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  min-height: 260px;
+}
+@media screen and (max-width: 1050px) {
+  .facts__content-item {
+    transform-origin: top;
+    transform: scale(0.7);
+    margin-bottom: -50px;
+  }
+}
+@media screen and (max-width: 510px) {
+  .facts__content-item {
+    transform-origin: top;
+    transform: scale(0.5);
+    margin-bottom: -150px;
+  }
+}
+.facts__content-item:before {
+  content: '';
+  width: 128px;
+  height: 128px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.facts__content-item_first {
+  background: url("../img/facts_clock.png") no-repeat 50% 20%;
+}
+.facts__content-item_second {
+  background: url("../img/facts_friends.png") no-repeat 50% 20%;
+}
+.facts__content-item_third {
+  background: url("../img/facts_rocket.png") no-repeat 50% 20%;
+}
+.facts__content-item_fourth {
+  background: url("../img/facts_cup.png") no-repeat 50% 20%;
 }
 body {
   max-width: 1600px;
@@ -830,27 +934,11 @@ a:hover {
   padding-bottom: 35px;
   background: url("../img/title_bg.png") no-repeat 50% 90%;
 }
-::-webkit-scrollbar {
-  width: 3px;
-  height: 3px;
+/* хром, сафари */
+.element::-webkit-scrollbar {
+  width: 0;
 }
-::-webkit-scrollbar-button {
-  background-color: #32b0ee;
-}
-::-webkit-scrollbar-track {
-  background-color: #999;
-}
-::-webkit-scrollbar-track-piece {
-  background-color: #ffffff;
-}
-::-webkit-scrollbar-thumb {
-  height: 50px;
-  background-color: #32b0ee;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-corner {
-  background-color: #999;
-}
-::-webkit-resizer {
-  background-color: #32b0ee;
+/* ie 10+ */
+.element {
+  -ms-overflow-style: none;
 }
