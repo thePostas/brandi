@@ -1,10 +1,8 @@
 var teamBoxes = document.getElementsByClassName('team-slider__content-box');
-// var featuresSliderContent = document.getElementsByClassName('features-slider__inner-content')[0];
 var teamButtons = document.getElementsByClassName('team-slider__controls-button');
 var teamScrolledContainer = document.getElementsByClassName('team-slider__content-wrapper')[0];
 var teamButtonPosition = 0;
 
-// featuresSliderContent.style.width = 100 * featuresBoxes.length + '%';
 
 for (var i = 0; i < teamButtons.length; i++) ((buttonNumber) => {
     teamButtons[i].addEventListener('click', function () {
