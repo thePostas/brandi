@@ -36,6 +36,12 @@
     bottom: 15px;
   }
 }
+@media screen and (max-width: 400px) {
+  .header__socials {
+    left: 30%;
+    bottom: 15px;
+  }
+}
 .mobile-menu {
   width: 100%;
   display: none;
@@ -194,6 +200,7 @@
   }
 }
 .header-slider-controls {
+  z-index: 100;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -639,7 +646,7 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  padding-top: 55px;
+  padding-top: 90px;
 }
 .team__text-content {
   font: 18px OpenSansSemiBold;
@@ -655,6 +662,7 @@
   align-items: center;
 }
 .team-slider {
+  position: relative;
   width: 1170px;
   min-height: 474px;
   margin: 0 auto;
@@ -664,6 +672,14 @@
     margin-top: 300px;
   }
 }
+@media screen and (max-width: 600px) {
+  .team-slider {
+    margin-top: 400px;
+  }
+}
+.team-slider__content {
+  overflow: hidden;
+}
 @media screen and (max-width: 1200px) {
   .team-slider__content {
     width: 585px;
@@ -672,16 +688,25 @@
 }
 @media screen and (max-width: 600px) {
   .team-slider__content {
+    padding-bottom: 50px;
     margin: 600px auto 0 auto;
     width: 270px;
   }
 }
 .team-slider__content-box {
+  transition: all 1s;
+  filter: opacity(0);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   height: 100%;
+}
+.team-slider__content-box_active {
+  filter: opacity(1);
+}
+.team-slider__content-wrapper {
+  display: flex;
 }
 .team-slider__container,
 .team-slider__contacts {
@@ -733,6 +758,30 @@
 .team-slider__profile-profession {
   font: 13px OpenSansRegular;
   margin-top: -5px;
+}
+.team-slider__controls {
+  display: flex;
+  position: absolute;
+  bottom: 13px;
+  left: 47.2%;
+}
+@media screen and (max-width: 600px) {
+  .team-slider__controls {
+    left: 40%;
+    bottom: 30px;
+  }
+}
+.team-slider__controls-button {
+  cursor: pointer;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: 0 7px;
+}
+.team-slider__controls-button_active {
+  background-color: #000;
+  border-color: #000;
 }
 .team__profile-socials {
   margin-top: 60px;

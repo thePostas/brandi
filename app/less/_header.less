@@ -35,6 +35,10 @@
       left: 40%;
       bottom: 15px;
     }
+    @media screen and (max-width: 400px) {
+      left: 30%;
+      bottom: 15px;
+    }
   }
   &__mobile-menu {
 
@@ -192,6 +196,7 @@
     }
   }
   &-controls {
+    z-index: 100;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -252,7 +257,6 @@
   top: 32px;
   left: 50.2%;
   content: '';
-  //background-color: #fff;
   border-left: 1px solid rgba(32, 68, 88, 1);
   width: 20px;
   height: 18px;
