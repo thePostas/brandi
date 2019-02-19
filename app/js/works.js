@@ -15,7 +15,6 @@ function addCategory(event) {
         activeButton = event.target;
         var currentButton = event.target.classList.toString().split(' ')[1].split('-');
         var buttonClass = 'photography__photo-container-' + currentButton[currentButton.length-1];
-        console.log(buttonClass);
         for (var i = 0; i < worksPhotos.length; i++) {
             worksPhotos[i].classList.remove('photography__photo-container_active');
         }

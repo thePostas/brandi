@@ -782,6 +782,9 @@
   background: rgba(0, 0, 0, 0.3) url("../img/works_sprites.png") no-repeat;
   margin: 2px;
 }
+.profile-socials__item:hover {
+  background-color: rgba(4, 15, 255, 0.7);
+}
 .profile-socials__item_twitter {
   background-position: -43px 0;
 }
@@ -1043,6 +1046,11 @@
 @media screen and (max-width: 1000px) {
   .communicate__form-button-label {
     right: 40%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .communicate__form-button-label {
+    right: 25%;
   }
 }
 .communicate__form-button-text {
