@@ -1289,9 +1289,8 @@ a:hover {
 /* хром, сафари */
 .photography__images-block::-webkit-scrollbar {
   width: 0;
-  background: rgba(255, 255, 255, 0);
 }
 /* ie 10+ */
-.photography__images-block {
+.element {
   -ms-overflow-style: none;
 }

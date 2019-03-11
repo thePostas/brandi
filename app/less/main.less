@@ -37,7 +37,11 @@ ul, ul li, p, h1, h2, h3, h4, a:hover {
 }
 
 /* хром, сафари */
-.photography__images-block::-webkit-scrollbar { width: 0; }
+.photography__images-block::-webkit-scrollbar { width: 0;
+    background: rgba(255, 255, 255, 0.0);
+}
 
 /* ie 10+ */
-.element { -ms-overflow-style: none; }
+.photography__images-block {
+    -ms-overflow-style: none;
+}
