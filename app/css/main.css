@@ -264,6 +264,11 @@
   width: 20px;
   height: 18px;
 }
+@media screen and (max-width: 350px) {
+  .logo__additional-text:before {
+    left: 60%;
+  }
+}
 @media screen and (max-width: 990px) {
   .navigation {
     box-sizing: border-box;
@@ -1110,6 +1115,11 @@
   overflow: hidden;
   width: 100%;
   height: 215px;
+}
+.communicate__map-content {
+  width: 100%;
+  height: 215px;
+  border: none;
 }
 .footer {
   box-sizing: border-box;
