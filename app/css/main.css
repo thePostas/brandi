@@ -464,22 +464,22 @@
   margin-left: 30px;
 }
 .features-slider__content-box-element_first {
-  background: url('../img/features_feather.png') no-repeat 0px 4px;
+  background: url('../img/features_feather.png') no-repeat 0 4px;
 }
 .features-slider__content-box-element_second {
   margin-left: 27px;
-  background: url('../img/features_pencil.png') no-repeat 0px 4px;
+  background: url('../img/features_pencil.png') no-repeat 0 4px;
 }
 .features-slider__content-box-element_third {
   margin-left: 28px;
-  background: url('../img/features_megaphone.png') no-repeat 0px 4px;
+  background: url('../img/features_megaphone.png') no-repeat 0 4px;
 }
 @media screen and (max-width: 1000px) {
   .features-slider__content-box-element {
     width: 90%;
     flex-direction: column;
     margin-bottom: 10%;
-    background-position: 0px 55%;
+    background-position: 0 55%;
     padding-left: 80px;
   }
 }
@@ -1268,7 +1268,7 @@ body {
   min-width: 320px;
   margin: 0 auto !important;
   padding: 0;
-  font-family: OpenSansRegular;
+  font-family: OpenSansRegular, sans-serif;
 }
 ul,
 ul li,
