@@ -3,11 +3,11 @@ var headerBlocks = document.getElementsByClassName('header-slider-content-box');
 var scrolledContainer = document.getElementsByClassName('header-slider-content-wrapper')[0];
 var autoScrollPosition = 0;
 
-for (var i = 0; i < headerButtons.length; i++) ((buttonNumber) => {
+for (var i = 0; i < headerButtons.length; i++) {
     headerButtons[i].addEventListener('click', function () {
-        slide(buttonNumber);
+        slide();
     })
-})(i);
+};
 
 function slide(buttonPosition) {
     for (var i = 0; i < headerButtons.length; i++) {
