@@ -4,11 +4,11 @@ var teamScrolledContainer = document.getElementsByClassName('team-slider__conten
 var teamButtonPosition = 0;
 
 
-for (var i = 0; i < teamButtons.length; i++) {
+for (var i = 0; i < teamButtons.length; i++) ((buttonNumber) => {
     teamButtons[i].addEventListener('click', function () {
-        teamSlide();
+        teamSlide(buttonNumber);
     })
-};
+})(i);
 
 function teamSlide(buttonPosition) {
     for (var i = 0; i < teamButtons.length; i++) {
