@@ -6,11 +6,11 @@ var featuresButtonPosition = 0;
 
 featuresSliderContent.style.width = 100 * featuresBoxes.length + '%';
 
-for (var i = 0; i < featuresButtons.length; i++) {
+for (var i = 0; i < featuresButtons.length; i++) ((buttonNumber) => {
     featuresButtons[i].addEventListener('click', function () {
-        featuresSlide();
+        featuresSlide(buttonNumber);
     })
-};
+})(i);
 
 function featuresSlide(buttonPosition) {
     for (var i = 0; i < headerButtons.length; i++) {
